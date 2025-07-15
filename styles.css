@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap'); /* cursive */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');    /* pixel-style */
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+
+
+.styled-name {
+  font-size: 3.5rem;
+  margin: 0;
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.cursive {
+font-family: 'Great Vibes', cursive;
+  color: #00137F;
+  font-size: 8rem;
+}
+
+.normal {
+  font-family: 'Arial', sans-serif;
+  color: #00137F;
+}
+
+.pixel {
+  font-family: 'VT323', monospace;
+  color: #00137F;
+  font-size: 5rem; /* pixel font tends to look smaller */
+}
+
+.flower-icon {
+  width: 100px;
+  height: auto;
+  animation: float 3s ease-in-out infinite;
+}
+
+.hero-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center ;
+  text-align: center;
+  gap: 0.5rem;
+  padding: 1rem 1rem;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.flower-img {
+  width: 150px;
+  height: auto;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Optional floating animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Responsive scaling */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2.5rem;
+    gap: 0.5rem;
+  }
+
+  .flower-img {
+    width: 40px;
+  }
+}
+  /*about section*/
+  .about-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center; /* 🔥 This centers the whole content */
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+
+
+.about-container .polaroid {
+  flex: 1;
+  max-width: 300px; /* Limit the width of the polaroid */
+}
+
+.polaroid {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px 10px 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  width: 250px;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  transition: transform 0.3s;
+}
+
+.polaroid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.polaroid .caption {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #444;
+}
+
+.polaroid:hover {
+  transform: rotate(-2deg) scale(1.02);
+}
+
+.about-text {
+  max-width: 600px;
+  font-family: Georgia, serif;
+}
+
+
+
+/* Reset + Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Playfair Display', serif;
+  background: #fffef3;
+  color: #111;
+  line-height: 1.6;
+}
+h1, h2, h3 {
+  font-family: 'Pixelify Sans', sans-serif;
+  color: #000860;
+  text-align: center;
+}
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.pink {
+  background: #ffc1d8;
+}
+.cream {
+  background: #fffef3;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #fffef3;
+}
+nav {
+  background: #000e63;
+  padding: 1rem;
+  text-align: center;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+nav ul li a {
+  font-family: 'Pixelify Sans', sans-serif;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+nav ul li a:hover {
+  color: pink
+}
+
+/* Hero */
+.hero {
+  padding: 8rem 2rem;
+}
+.hero h1 {
+  font-size: 4rem;
+}
+.hero .script {
+  font-family: cursive;
+  font-size: 5rem;
+  color: #000860;
+}
+
+/*cardss */
+.project-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-img:hover {
+  transform: scale(1.03);
+}
+
+.card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  max-width: 350px;
+  text-align: left;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.2), transparent);
+  transform: rotate(25deg);
+  transition: 0.5s;
+}
+
+.card:hover::before {
+  top: 100%;
+  left: 100%;
+}
+
+
+/* Cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.card {
+  background: #fce9ee;
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* Skills */
+.skills {
+  margin-top: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+/* Form */
+form {
+  max-width: 400px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+input, button {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+}
+button {
+  background: #e880a8;
+  color: white;
+  cursor: pointer;
+}
+button:hover {
+  background: #c85d90;
+}
+
+/* Footer */
+footer {
+  background: #000e63;
+  color: #fffef3;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* Animations */
+.hero, .section {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeIn 1s ease forwards;
+}
+.section:nth-child(2) { animation-delay: 0.4s; }
+.section:nth-child(3) { animation-delay: 0.6s; }
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+textarea {
+  resize: vertical;
+  height: 100px;
+}
+/* Pastel Background Animation */
+.pastel-bg {
+  background: linear-gradient(270deg, #fce4ec, #f3e5f5, #e3f2fd);
+  background-size: 600% 600%;
+  animation: pastelShift 10s ease infinite;
+}
+
+@keyframes pastelShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .about-text {
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .project-img {
+    width: 100%;
+    height: auto;
+  }
+  .card {
+    width: 90%;
+  }
+}
+@media (max-width: 400px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .project-img {
+    width: 100%;
+    height: auto;
+  }
+  .card {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    padding: 4rem 1rem;
+  }
+  .hero h1 {
+    font-size: 3rem;
+  }
+  .flower-img {
+    width: 100px;
+  }
+}

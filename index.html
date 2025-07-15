@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hasya | Frontend Explorer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Playfair+Display&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <link rel="icon" href="images/favicon.jpg" sizes="32x32" type="image/png">
+
+ 
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#about">About me</a></li>
+        <li><a href="#projects">Code & Canvas</a></li>
+        <li><a href="#skills">Skill Architecture</a></li>
+        <li><a href="#contact">Let's Connect</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+        
+  <div class="hero-title">
+    <h1 class="styled-name">
+      <span class="cursive">H</span>
+      <span class="normal">A</span>
+      <span class="pixel">S</span>
+      <span class="normal">Y</span>
+      <span class="normal">A</span>
+    </h1>
+    <img src="images/flower3.png" alt="flower" class="flower-icon" />
+  </div>
+  <p>A frontend explorer blending tech, design, and emotion</p>
+
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="section pink">
+        <div class="about-container">
+  <div class="polaroid">
+    <img src="images/hasyaimg.jpeg" alt="Hasya's photo" />
+    <p class="caption">Hasya 🌸</p>
+  </div>
+      <div class="about-text">
+        <h2 class="about-header">About Me</h2>
+        <p>
+          Hey! I’m Hasya — a designer, creative developer, and digital storyteller.
+        </p>
+        <p>
+         I specialize in crafting elegant, expressive digital experiences that balance design with intention. From UI/UX design to frontend development, my goal is always the same: make people feel something through clean, thoughtful visuals.
+        <p>
+          I have a background in electronics and telecom, but my passion lives in creativity — visual design, web aesthetics, and poetic digital storytelling..
+        </p>
+        <p>
+          Whether I’m building a wellness tracker, a mood-based landing page, or something just for fun, I design with empathy and bring a human touch to every pixel.
+        </p>
+<p>
+  Currently creating, learning, and slowly building my dream creative career. This is just the beginning.
+</p>
+        <p>
+          I freelance as a Canva designer on <a href="https://www.fiverr.com/hasyadhakle/" target="_blank" rel="noopener">Fiverr</a> and actively work on projects that reflect my values: clarity, creativity, and care.
+        </p>
+
+      </div>
+    </section>
+
+
+
+    <section id="projects" class="section cream">
+  <h2>Code & Canvas</h2>
+  <div class="cards">
+    
+    <div class="card">
+      <img src="images/mindgarden.png" alt="Mind Garden preview" class="project-img" />
+      <h3><a href=" https://lnkd.in/d9mTVmEj" target="_blank">MIND GARDEN</a></h3>
+      <p>A calm, journaling-based wellness tracker built with Streamlit. Minimal, soothing, and mindful.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/cryptodashboard.png" alt="Crypto Dashboard preview" class="project-img" />
+      <h3><a href="https://lnkd.in/du8SpNjJ" target="_blank">CRYPTO DASHBOARD</a></h3>
+      <p>A responsive interface for real-time cryptocurrency updates — functional and styled with elegance.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/folklore.png" alt="Folklore preview" class="project-img" />
+      <h3><a href="https://lnkd.in/dAqZw89N" target="_blank">FOLKLORE LANDING PAGE</a></h3>
+      <p>A soft, poetic aesthetic page inspired by storytelling and mood. Typography and layout in harmony.</p>
+    </div>
+
+  </div>
+</section>
+
+
+    <section id="skills" class="section pink">
+      <h2>Skill Architecture</h2>
+      <ul class="skills">
+        <li>🎨 <strong>UI/UX Sensibility</strong> – Emotion-driven clarity and user flow</li>
+        <li>💻 <strong>Frontend Prototyping</strong> – HTML, CSS, Python (Streamlit)</li>
+        <li>🖼️ <strong>Poster Design with Canva</strong> – Clear visual storytelling</li>
+        <li>🗣️ <strong>Public Communication & Leadership</strong> – Direction & client-facing confidence</li>
+        <li>🔤 <strong>Programming Languages</strong> – C, C++, Java, Python</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="section cream">
+      <h2>Let's Connect</h2>
+      <p>If you're building something meaningful — visually, emotionally, or technically — I’d love to be part of it.</p>
+  <form id="contact-form">
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="email" placeholder="Your Email" required />
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <input type="hidden" name="time" id="time" />
+  <button type="submit">Send</button>
+</form>
+
+<!-- Feedback status -->
+<p id="form-status"></p>
+
+
+       
+    </section>
+  </main>
+
+  <footer>
+    <p>© Hasya 2025 • Designed with emotion 🌸</p>
+     <div class="social-links">
+    <a href="https://www.linkedin.com/in/your-profile" target="_blank" aria-label="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://www.instagram.com/yourusername" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+  </footer>
+<!-- Load EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  window.onload = function () {
+    // ✅ Initialize EmailJS
+    emailjs.init("4sRTqAeZaw9PyXxTL6sKd"); // Replace with your actual EmailJS public key if needed
+
+    // ✅ Set the current time in the hidden field
+    const timeField = document.getElementById("time");
+    if (timeField) {
+      timeField.value = new Date().toLocaleString();
+    }
+
+    // ✅ Handle form submission
+    const form = document.getElementById("contact-form");
+    const status = document.getElementById("form-status");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Optional: Show "sending" status
+      status.innerText = "Sending...";
+
+      emailjs.sendForm("service_1p9xu2y", "template_knukv27", this).then(
+        () => {
+          status.innerText = "🌸 Message sent successfully!";
+          form.reset();
+        },
+        (error) => {
+          status.innerText = "⚠️ Failed to send message. Please try again.";
+          console.error("EmailJS Error:", error);
+        }
+      );
+    });
+
+    // ✅ Smooth scrolling for navbar links
+    document.querySelectorAll("nav a").forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth",
+        });
+      });
+    });
+  };
+</script>
+
+
+</body>
+</html>
